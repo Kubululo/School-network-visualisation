@@ -5,10 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>PCNetworkVisualisation</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{{ asset('css/Animate.css') }}">
+
+
 
         <!-- Styles -->
         <style>
@@ -22,7 +25,7 @@
             }
 
             .full-height {
-                height: 100vh;
+                height: 40vh;
             }
 
             .flex-center {
@@ -62,14 +65,25 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            #responsive{
+                width: 100%;
+                max-width: 900px;
+                height: auto;}
+            .disclaimer {
+                text-transform: uppercase;
+                font-size: 16px;
+                color: #101010;
+                font-weight: 600;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-
-
+    <div class="flex-center fadeIn animated">
+        <img id="responsive" src="{{url('icons/pc.png')}}" alt="pc"/>
+    </div>
+        <div class="flex-center position-ref full-height fadeIn  animated">
             <div class="content">
-                <div class="title m-b-md">
+                <div class="title m-b-md bounce animated" data-wow-delay="1s">
                     PC NETWORK VISUALISATION
                 </div>
                 @if (Route::has('login'))
@@ -83,18 +97,19 @@
                     </div>
                 @endif
                     <br>
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
+                <div class="links fadeIn animated">
+                    <a href="http://127.0.0.1:8000/documentation/">Documentation</a>
                     <a href="http://localhost/phpmyadmin/">PHPMyAdmin</a>
                 </div>
             </div>
         </div>
     </body>
     <footer>
-        <div class="content">
-            <div class="links">
-            By Jakub Skurcak 2018
+        <div class="content fadeIn animated">
+            <div class="disclaimer">
+            By Jakub Skurcak 2018 All Rights Reserved
                 <br>
             </div>
+        </div>
     </footer>
 </html>
